@@ -44,7 +44,14 @@ export default function ContactMe() {
 
   return (
     <article id="contactMe" className="relative my-[102px] py-9 rounded-l-2xl">
-      <div className="absolute inset-0 z-0 bg-secondary rounded-r-2xl"></div>
+      <div
+        className="
+        absolute inset-0 z-0 bg-secondary rounded-r-2xl
+        lg:mr-[147px] md:mr-[88px] sm:mr-[59px] mr-[29px]
+        lg:pr-[53px] md:pr-[32px] pr-[24px]
+        lg:pl-[200px] md:pl-[120px] sm:pl-[80px] pl-[40px]
+      "
+      ></div>
       <Wrapper isContent className="relative z-10 grid grid-cols-3 text-text">
         <section className="lg:col-span-2 col-span-3 mb-4 sm:text-start text-center">
           <h1 className="text-4xl font-semibold mb-2.5">
