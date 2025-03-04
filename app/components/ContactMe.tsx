@@ -16,7 +16,7 @@ export default function ContactMe() {
     }
     try {
       setStatus("Enviando...");
-
+    
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -34,6 +34,7 @@ export default function ContactMe() {
         setStatus(data.error || "Error al enviar el mensaje");
       }
     } catch (error) {
+      console.error(error);
       setStatus("Hubo un error al enviar el mensaje");
     }
   };

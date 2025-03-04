@@ -21,8 +21,6 @@ export default function Experience() {
   }, []);
 
   const totalPages = Math.ceil(experienceData.length / itemsPerPage);
-  const startIndex = page * itemsPerPage;
-  const currentItems = experienceData.slice(startIndex, startIndex + itemsPerPage);
 
   const nextPage = () => {
     if (page < totalPages - 1) {

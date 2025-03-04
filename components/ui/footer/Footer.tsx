@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { Button, Wrapper } from "@/components/ui/index";
+import { Wrapper } from "@/components/ui/index";
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import nodemailer, { Transporter } from "nodemailer";
+import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {

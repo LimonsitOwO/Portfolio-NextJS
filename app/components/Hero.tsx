@@ -2,11 +2,10 @@
 
 import { Wrapper } from '@/components/ui';
 import Link from 'next/link';
-import Image from 'next/image';
 import heroData from '@/app/data/hero.json';
 
 export default function HeroSection() {
-  const { title, description, button, image } = heroData;
+  const { title, description, button } = heroData;
 
   return (
     <Wrapper isContent>
