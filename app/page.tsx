@@ -1,10 +1,14 @@
 import { Navbar } from "@/components/ui";
+import { AboutMe, Experience, Hero, Services } from "./components";
 
 export default function Home() {
   return (
-    <div className="">
+    <main>
       <Navbar />
-
-    </div>
+      <Hero />
+      <AboutMe />
+      <Services />
+      <Experience />
+    </main>
   );
 }
