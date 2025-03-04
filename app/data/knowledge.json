@@ -20,7 +20,7 @@
     ]
   },
   {
-    "title": "Full Stack Development",
+    "title": "Tools & Technologies",
     "features": [
       "Git & GitHub",
       "Docker, Docker Compose",
@@ -30,12 +30,12 @@
     ]
   },
   {
-    "title": "Tools & Technologies",
+    "title": "Software Development Principles",
     "features": [
-      "Ecommerce platforms",
-      "Business management systems",
-      "Third-party API integrations",
-      "Performance optimization and legacy code refactoring"
-    ]
+      "Clean code",
+      "Design patterns",
+      "SOLID principles",
+      "Scalability and performance optimization"
+    ]  
   }
 ]
