@@ -32,3 +32,13 @@ html {
   --color-border: #D0D0D0;
   --color-hover: #E5383B;
 }
+
+.svg-mask {
+  filter: invert(1);
+  transition: filter 0.1s ease-in-out;
+}
+
+.dark .svg-mask {
+  filter: invert(0);
+}
+

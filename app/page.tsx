@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/ui";
-import { AboutMe, Experience, Hero, Services } from "./components";
-import Knowledge from "./components/Knowledge";
+import { AboutMe, Experience, Hero, Knowledge, Services, Technologies } from "./components";
 
 export default function Home() {
   return (
@@ -11,6 +10,7 @@ export default function Home() {
       <Services />
       <Experience />
       <Knowledge />
+      <Technologies />
     </main>
   );
 }
