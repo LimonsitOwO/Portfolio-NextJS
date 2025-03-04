@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/ui";
-import { AboutMe, Experience, Hero, Knowledge, Services, Technologies } from "./components";
+import { Footer, Navbar } from "@/components/ui";
+import { AboutMe, ContactMe, Experience, Hero, Knowledge, Services, Technologies } from "./components";
 
 export default function Home() {
   return (
@@ -11,6 +11,8 @@ export default function Home() {
       <Experience />
       <Knowledge />
       <Technologies />
+      <ContactMe />
+      <Footer />
     </main>
   );
 }

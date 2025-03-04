@@ -1,7 +1,9 @@
-import { Wrapper } from "@/components/ui";
-import Link from "next/link";
-import Image from "next/image";
-import heroData  from "@/app/data/hero.json";
+'use client';
+
+import { Wrapper } from '@/components/ui';
+import Link from 'next/link';
+import Image from 'next/image';
+import heroData from '@/app/data/hero.json';
 
 export default function HeroSection() {
   const { title, description, button, image } = heroData;
@@ -24,12 +26,20 @@ export default function HeroSection() {
           </Link>
         </article>
 
-        <article className="grid lg:col-span-1 col-span-2 justify-center items-center">
-          <Image
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            alt={image.alt}
+        <article
+          className="grid lg:col-span-1 col-span-2 justify-center items-center overflow-hidden w-full p-8 lg:mt-0mt-8"
+          onMouseEnter={(e) => {
+            (e.currentTarget.querySelector('img') as HTMLImageElement).style.filter = `drop-shadow(0 0 20px #F50057)`;
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget.querySelector('img') as HTMLImageElement).style.filter = 'none';
+          }}
+        >
+          <img
+            src="/assets/svg/NestJS.svg"
+            alt="Logo de NestJS"
+            className="object-contain w-full h-full min-h-[300px] transition-all duration-500"
+            style={{ cursor: 'pointer' }}
           />
         </article>
       </section>
