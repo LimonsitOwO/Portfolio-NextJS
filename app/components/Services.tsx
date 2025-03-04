@@ -4,7 +4,7 @@ import serviceData  from "@/app/data/services.json";
 export default function Services() {
   return (
     <Wrapper isContent>
-      <section className="grid grid-cols-4 w-full text-text py-[102px] gap-4">
+      <section id="services" className="grid grid-cols-4 w-full text-text py-[102px] gap-4">
         <article className="col-span-4 mb-2">
           <h1 className="text-4xl font-semibold mb-6 text-center">Services</h1>
           <p className="text-lg font-medium">

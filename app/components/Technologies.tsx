@@ -34,7 +34,8 @@ export default function Technologies() {
                 width={75}
                 height={75}
                 className="object-contain transition-all duration-500"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer", height: "auto", width: "100%" }}
+                loading="eager"
               />
               <p className="text-center text-[12px] mt-2 font-semibold">{technology.name}</p>
             </article>

@@ -38,7 +38,7 @@ export default function Experience() {
 
   return (
     <Wrapper isContent>
-      <section className="w-full text-text py-[102px]">
+      <section id="experience" className="w-full text-text py-[102px]">
         <h1 className="text-4xl font-semibold mb-10 text-center">Experience</h1>
         <div className="relative overflow-hidden w-full">
           <div 
@@ -66,7 +66,7 @@ export default function Experience() {
                         <Link
                           href={experience.link}
                           target="_blank"
-                          className="w-[100px] text-[10px] font-medium bg-primary active:bg-hover text-text rounded-full leading-4 mx-auto py-1.5 text-center mt-2"
+                          className="w-[100px] text-[10px] font-medium bg-primary active:bg-hover text-text rounded-full leading-4 mx-auto py-1.5 text-center mt-2 hover:drop-shadow-[0_0_8px_#F50057] transition-all duration-300"
                         >
                           Visit the page
                         </Link>
@@ -82,9 +82,9 @@ export default function Experience() {
           <button
             onClick={prevPage}
             disabled={page === 0}
-            className={`p-2 bg-primary rounded-full ${page === 0 ? "opacity-20 cursor-not-allowed" : "hover:bg-hover"}`}
+            className={`p-2 bg-primary rounded-full ${page === 0 ? "opacity-20 cursor-not-allowed" : ""}`}
           >
-            <svg width="20" height="34" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="34" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg" className="hover:drop-shadow-[0_0_8px_#F50057] transition-all duration-300">
               <path d="M16.6666 30.3333L3.33329 17L16.6666 3.66663" stroke="white" strokeWidth="6.66667" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
@@ -92,9 +92,9 @@ export default function Experience() {
           <button
             onClick={nextPage}
             disabled={page === totalPages - 1}
-            className={`p-2 bg-primary rounded-full ${page === totalPages - 1 ? "opacity-20 cursor-not-allowed" : "hover:bg-hover"}`}
+            className={`p-2 bg-primary rounded-full ${page === totalPages - 1 ? "opacity-20 cursor-not-allowed" : ""}`}
           >
-            <svg width="20" height="34" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="20" height="34" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg" className="hover:drop-shadow-[0_0_8px_#F50057] transition-all duration-300">
               <path d="M3.33325 30.3333L16.6666 17L3.33325 3.66663" stroke="white" strokeWidth="6.66667" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>

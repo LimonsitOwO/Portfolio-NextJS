@@ -22,13 +22,13 @@ export default function ButtonText({
   let variantClass = '';
   switch (variant) {
     case 'Primary':
-      variantClass = 'bg-primary active:bg-hover text-text';
+      variantClass = 'bg-primary hover:drop-shadow-[0_0_8px_#F50057] text-text cursor-pointer';
       break;
     case 'Secondary':
-      variantClass = 'bg-secondary active:bg-hover text-text';
+      variantClass = 'bg-secondary hover:drop-shadow-[0_0_8px_#F50057] text-text cursor-pointer';
       break;
     default:
-      variantClass = 'bg-tecnofi-primary active:bg-hover text-text';
+      variantClass = 'bg-tecnofi-primary hover:drop-shadow-[0_0_8px_#F50057] text-text cursor-pointer';
   }
 
   return (

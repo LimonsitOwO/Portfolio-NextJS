@@ -4,7 +4,7 @@ import knowledgeData  from "@/app/data/knowledge.json";
 export default function Knowledge() {
   return (
     <Wrapper isContent>
-      <section className="grid grid-cols-4 w-full text-text py-[102px] gap-4">
+      <section id="knowledge" className="grid grid-cols-4 w-full text-text py-[102px] gap-4">
         <article className="col-span-4 mb-2">
           <h1 className="text-4xl font-semibold mb-6 text-center">Knowledge</h1>
           <p className="text-lg font-medium">

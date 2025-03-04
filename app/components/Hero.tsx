@@ -19,8 +19,8 @@ export default function HeroSection() {
             </p>
           ))}
           <Link
-            href={button.link}
-            className="w-[150px] font-semibold bg-secondary active:bg-hover text-text rounded-full leading-4 mx-auto py-2.5 text-center"
+            href="#contactMe"
+            className="w-[150px] font-semibold bg-secondary hover:drop-shadow-[0_0_8px_#F50057] transition-all duration-300 text-text rounded-full leading-4 mx-auto py-2.5 text-center"
           >
             {button.text}
           </Link>
