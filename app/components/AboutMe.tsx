@@ -32,6 +32,7 @@ export default function AboutMe() {
                 key={index}
                 href={link.url}
                 className="w-[150px] font-semibold bg-primary hover:drop-shadow-[0_0_8px_#F50057] transition-all duration-300 text-text rounded-full leading-4 py-2.5 text-center"
+                {...(link.label === "Curriculum" ? { download: true } : {})}
               >
                 {link.label}
               </Link>
