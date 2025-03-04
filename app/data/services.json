@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Frontend Development",
+    "features": [
+      "Modern interfaces with React, Next.js, and Angular",
+      "API consumption and integration",
+      "Responsive and accessible web applications",
+      "Component-based architecture with TypeScript"
+    ]
+  },
+  {
+    "title": "Backend Development",
+    "features": [
+      "API development with NestJS, Node.js, Express.js, and Laravel",
+      "RESTful and GraphQL API integrations",
+      "Authentication and authorization with JWT and OAuth",
+      "Database management with PostgreSQL, MySQL, and MongoDB"
+    ]
+  },
+  {
+    "title": "Full Stack Development",
+    "features": [
+      "Complete web applications using React, Next.js, Angular, Node.js, Express.js, NestJS, and Laravel",
+      "Scalable and secure architectures",
+      "Business process automation",
+      "Client-server communication and real-time data processing"
+    ]
+  },
+  {
+    "title": "Custom Solutions",
+    "features": [
+      "Ecommerce platforms",
+      "Business management systems",
+      "Third-party API integrations",
+      "Performance optimization and legacy code refactoring"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Frontend Development",
+    "features": [
+      "React, Next.js, Angular",
+      "TypeScript",
+      "Component-based architecture",
+      "Responsive and accessible design",
+      "API consumption and integration"
+    ]
+  },
+  {
+    "title": "Backend Development",
+    "features": [
+      "NestJS, Node.js, Express.js, Laravel",
+      "RESTful API development",
+      "Authentication with JWT and OAuth",
+      "Database management with PostgreSQL, MySQL, and MongoDB",
+      "Business logic implementation"
+    ]
+  },
+  {
+    "title": "Full Stack Development",
+    "features": [
+      "Git & GitHub",
+      "Docker, Docker Compose",
+      "Postman",
+      "Swagger",
+      "Linux-based systems"
+    ]
+  },
+  {
+    "title": "Tools & Technologies",
+    "features": [
+      "Ecommerce platforms",
+      "Business management systems",
+      "Third-party API integrations",
+      "Performance optimization and legacy code refactoring"
+    ]
+  }
+]

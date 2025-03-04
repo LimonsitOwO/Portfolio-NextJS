@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
-import { Button, Wrapper } from "@/components/ui/index";
+import { Wrapper } from "@/components/ui";
+import aboutMeData  from "@/app/data/about-me.json";
+
 import Link from "next/link";
-import Image from "next/image";
 
 export default function AboutMe() {
   return (
@@ -14,25 +14,25 @@ export default function AboutMe() {
     ">
       <article className="lg:col-span-2 col-span-3 mb-8">
         <h1 className="text-4xl font-semibold mb-2.5">
-          About Me
+          {aboutMeData.title}
         </h1>
-        <p className="text-lg font-medium">
-          I'm Luis Carlos, a Software Engineer specializing in web development and scalable software solutions. I create high-performance applications using React, Next.js, Angular, TypeScript, Node.js, NestJS, and Laravel.
-        </p>
-        <p className="text-lg font-medium">
-          With a focus on clean code, performance, and maintainability, I build solutions that optimize business processes and deliver seamless user experiences.
-        </p>
+        {aboutMeData.description.map((paragraph, index) => (
+          <p key={index} className="text-lg font-medium mb-4">
+            {paragraph}
+          </p>
+        ))}
       </article>
       <article className="flex lg:flex-col sm:flex-row flex-col justify-center lg:items-end items-center lg:col-span-1 col-span-3 gap-5">
-        <Link href={`#`} className="w-[150px] font-semibold bg-primary active:bg-hover text-text rounded-full leading-4 py-2.5 text-center">
-          GitHub
-        </Link>
-        <Link href={`#`} className="w-[150px] font-semibold bg-primary active:bg-hover text-text rounded-full leading-4 py-2.5 text-center">
-          LinkedIn
-        </Link>
-        <Link href={`#`} className="w-[150px] font-semibold bg-primary active:bg-hover text-text rounded-full leading-4 py-2.5 text-center">
-          Curriculum
-        </Link>
+        {aboutMeData.links.map((link, index) => (
+          <Link
+            key={index}
+            href={link.url}
+            target="_blank"
+            className="w-[150px] font-semibold bg-primary active:bg-hover text-text rounded-full leading-4 py-2.5 text-center"
+          >
+            {link.label}
+          </Link>
+        ))}
       </article>
     </section>
   );

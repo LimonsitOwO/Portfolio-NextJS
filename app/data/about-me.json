@@ -1,0 +1,21 @@
+{
+  "title": "About Me",
+  "description": [
+    "I'm Luis Carlos, a Software Engineer specializing in web development and scalable software solutions. I create high-performance applications using React, Next.js, Angular, TypeScript, Node.js, NestJS, and Laravel.",
+    "With a focus on clean code, performance, and maintainability, I build solutions that optimize business processes and deliver seamless user experiences."
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/LuisCarlosBallen"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/luis-carlos-ballen"
+    },
+    {
+      "label": "Curriculum",
+      "url": "/assets/cv-luis-carlos.pdf"
+    }
+  ]
+}
