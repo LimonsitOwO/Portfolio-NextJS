@@ -64,7 +64,7 @@ export default function ContactMe() {
           ))}
           <input
             type="email"
-            placeholder="Tu correo electrónico"
+            placeholder="Your email"
             value={email}
             className="mb-1 bg-text w-full font-medium text-[16px] text-primary py-0.5 px-2.5 rounded-lg border-4 border-primary focus:outline-none focus:drop-shadow-[0_0_8px_#F50057] transition-all duration-300"
             onChange={handleEmailChange}
