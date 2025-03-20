@@ -1,8 +1,26 @@
 [
   {
+    "title": "Soluciones Star",
+    "position": "Software Developer",
+    "date": "Mar 2025 – Present",
+    "skills": [
+      "NestJS",
+      "TypeScript",
+      "AI Integration",
+      "OCR"
+    ],
+    "responsibilities": [
+      "Integrated AI systems and third-party libraries into the existing infrastructure.",
+      "Developed solutions using OCR technology for document processing.",
+      "Built and maintained APIs for various business processes.",
+      "Worked with NestJS to create scalable backend services.",
+      "Collaborated with cross-functional teams to ensure smooth integration and functionality."
+    ]
+  },
+  {
     "title": "Tecnoficom",
     "position": "Full Stack Developer",
-    "date": "Mar 2023 – Nov 2023",
+    "date": "May 2024 – Feb 2025",
     "skills": [
       "React",
       "TypeScript",
