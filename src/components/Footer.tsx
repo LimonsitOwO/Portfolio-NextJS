@@ -94,13 +94,21 @@ export function Footer() {
                 GitHub
               </a>
               <a
-                href="mailto:luisinfo304@gmail.com"
+                href="mailto:luislm080304@gmail.com"
                 className="text-neutral-400 hover:text-white transition-colors text-sm"
               >
                 Email
               </a>
               <a
-                href="https://wa.me/573093082496"
+                href="https://www.linkedin.com/in/luis-carlos-ballen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors text-sm"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://wa.me/573208249935"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors text-sm"

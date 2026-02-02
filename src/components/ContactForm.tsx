@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Send, Mail, Phone, MapPin, CheckCircle2 } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, CheckCircle2, Linkedin } from 'lucide-react';
 
 interface ContactFormProps {
   selectedService: string | null;
@@ -20,23 +20,73 @@ const serviceNames: Record<string, string> = {
 };
 
 export function ContactForm({ selectedService }: ContactFormProps) {
+  const [selectedServices, setSelectedServices] = useState<string[]>(
+    selectedService ? [selectedService] : []
+  );
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     company: '',
-    service: selectedService || '',
     message: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Sync with selectedService prop changes
+  useState(() => {
+    if (selectedService && !selectedServices.includes(selectedService)) {
+      setSelectedServices(prev => [...prev, selectedService]);
+    }
+  });
+
+  const toggleService = (id: string) => {
+    setSelectedServices(prev =>
+      prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    if (selectedServices.length === 0) {
+      alert('Por favor selecciona al menos un servicio.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          service: selectedServices.map(id => serviceNames[id] || id)
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+        });
+        setSelectedServices([]);
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor intenta de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('No se pudo conectar con el servidor de correo.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -60,8 +110,7 @@ export function ContactForm({ selectedService }: ContactFormProps) {
               <span className="block text-neutral-400 mt-2">Tu Proyecto</span>
             </h2>
             <p className="text-xl text-neutral-300 mb-12 leading-relaxed">
-              Estoy listo para convertir tu visión en realidad. Cuéntame sobre tu proyecto
-              y trabajemos juntos para crear algo extraordinario.
+              Estoy listo para convertir tu visión en realidad. Selecciona los servicios que te interesan y cuéntame sobre tu proyecto.
             </p>
 
             {/* Contact details */}
@@ -82,7 +131,7 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-400">Teléfono</p>
-                  <p className="text-lg font-medium">+57 930 8249698</p>
+                  <p className="text-lg font-medium">+57 320 8249935</p>
                 </div>
               </div>
 
@@ -110,6 +159,14 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                 </svg>
               </a>
               <a
+                href="https://www.linkedin.com/in/luis-carlos-ballen/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
                 href="https://portfolio-next-js-sage-three.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -129,7 +186,7 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                 Solicitar Servicio
               </CardTitle>
               <CardDescription className="text-neutral-400">
-                Completa el formulario y te contactaré en menos de 24 horas
+                Completa el formulario y te contactaré pronto
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -143,6 +200,28 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Service Selection Tags */}
+                  <div>
+                    <label className="text-sm font-medium text-neutral-300 mb-3 block">
+                      ¿En qué servicios estás interesado? *
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      {Object.entries(serviceNames).map(([id, name]) => (
+                        <button
+                          key={id}
+                          type="button"
+                          onClick={() => toggleService(id)}
+                          className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 border-2 ${selectedServices.includes(id)
+                              ? 'bg-white text-black border-white'
+                              : 'bg-transparent text-neutral-400 border-neutral-800 hover:border-neutral-600'
+                            }`}
+                        >
+                          {name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-neutral-300 mb-2 block">
@@ -230,10 +309,20 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-white text-black hover:bg-neutral-200 text-lg py-6 group"
+                    disabled={isLoading}
+                    className="w-full bg-white text-black hover:bg-neutral-200 text-lg py-6 group disabled:opacity-50"
                   >
-                    <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    Enviar Solicitud
+                    {isLoading ? (
+                      <span className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                        Enviando...
+                      </span>
+                    ) : (
+                      <>
+                        <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                        Enviar Solicitud
+                      </>
+                    )}
                   </Button>
                 </form>
               )}

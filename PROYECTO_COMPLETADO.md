@@ -197,8 +197,8 @@ Breakpoints optimizados:
 
 ## 📞 Información de Contacto (Implementada)
 
-- ✉️ Email: <luisinfo304@gmail.com>
-- 📱 Teléfono: +57 930 8249698
+- ✉️ Email: <luislm080304@gmail.com>
+- 📱 Teléfono: +57 320 8249935
 - 🐙 GitHub: github.com/LimonsitOwO
 - 🌐 Portfolio: portfolio-next-js-sage-three.vercel.app
 

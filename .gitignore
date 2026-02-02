@@ -22,7 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
+.env
 # Environment variables
 .env
 .env.local
@@ -36,3 +36,5 @@ build
 
 # Temporary files
 @
+
+node_modules

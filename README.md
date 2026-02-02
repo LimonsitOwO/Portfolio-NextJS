@@ -145,8 +145,8 @@ Configurado con:
 
 ## 📞 Contacto
 
-- **Email**: <luisinfo304@gmail.com>
-- **Teléfono**: +57 930 8249698
+- **Email**: <luislm080304@gmail.com>
+- **Teléfono**: +57 320 8249935
 - **GitHub**: [LimonsitOwO](https://github.com/LimonsitOwO)
 - **Portfolio**: [portfolio-next-js-sage-three.vercel.app](https://portfolio-next-js-sage-three.vercel.app)
 
