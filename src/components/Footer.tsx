@@ -47,16 +47,6 @@ export function Footer() {
                   Contacto
                 </button>
               </li>
-              <li>
-                <a
-                  href="https://portfolio-next-js-sage-three.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-white transition-colors text-sm"
-                >
-                  Portfolio Completo
-                </a>
-              </li>
             </ul>
           </div>
 

@@ -121,7 +121,7 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-400">Email</p>
-                  <p className="text-lg font-medium">luisinfo304@gmail.com</p>
+                  <p className="text-lg font-medium">luislm080304@gmail.com</p>
                 </div>
               </div>
 
@@ -166,16 +166,6 @@ export function ContactForm({ selectedService }: ContactFormProps) {
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a
-                href="https://portfolio-next-js-sage-three.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </a>
             </div>
           </div>
 
@@ -212,8 +202,8 @@ export function ContactForm({ selectedService }: ContactFormProps) {
                           type="button"
                           onClick={() => toggleService(id)}
                           className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 border-2 ${selectedServices.includes(id)
-                              ? 'bg-white text-black border-white'
-                              : 'bg-transparent text-neutral-400 border-neutral-800 hover:border-neutral-600'
+                            ? 'bg-white text-black border-white'
+                            : 'bg-transparent text-neutral-400 border-neutral-800 hover:border-neutral-600'
                             }`}
                         >
                           {name}
@@ -333,3 +323,5 @@ export function ContactForm({ selectedService }: ContactFormProps) {
     </section>
   );
 }
+
+
